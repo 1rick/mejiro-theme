@@ -18,7 +18,11 @@ body {
     margin: 0;
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     background-color: var(--page-background);
+    font-size: 20px;
 }
+
+
+
 
 header {
     text-align: center;
@@ -26,6 +30,8 @@ header {
     width: 100%;
     z-index: 1;
 }
+
+
 
 
 
@@ -115,18 +121,39 @@ nav a:hover {
   }
 
 
+
 #maincontent {
     margin: 0 auto;
-    max-width: 50em;
     line-height: 1.5;
     padding: 4em 1em;
     color: var(--page-foreground);
   }
 
+
+#maincontent > *:not(img):not(video) { 
+    max-width: 50rem;
+    margin: auto;
+  }
+
+#maincontent img {
+    max-width: 100%;
+    display: block;
+    margin: 3rem auto;
+}
+
+#maincontent .narrow_image {
+    max-width: 100%;
+}
+
+
 #maincontent a {
     color: var(--primary-color);
 }
 
+h2, h3, h4, h5 {
+    padding-top: 1.8em;
+    padding-bottom: 0.8em;
+  }
 
   
 footer {
@@ -169,6 +196,11 @@ footer a {
     header {
         display: grid;
         grid-template-columns: 1fr auto minmax(700px, 3fr);
+    }
+
+
+    #maincontent .narrow_image {
+        max-width: 50rem;
     }
 
     nav {
